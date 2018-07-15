@@ -245,6 +245,41 @@ function checkAnswer() {
         result += $(this).attr("value");
     });
     console.log("result: " + result);
+    return result;
+}
+
+function checkScore() {
+    $('w3-modal').css('display', 'block');
+    document.getElementById('scoreModal').style.display='block'
+
+    content = "";
+
+    response = checkAnswer();
+    var count = 0;
+    pluralizer = 's';
+    for(var i = 0; i < answer.length; i++)
+    {
+        if( answer[i] == response[i]){
+            count++;
+            if (count == 1)
+            {
+                pluralizer = 's';
+            }
+        }
+    }
+    
+    content += "<p>You have " + count + " part" + pluralizer + " correct!</p>";
+    
+    if(count == answer.length)
+    {
+        content += "<p>You got it!</p><p>Select another puzzle from the menu :)";
+        content += "<p><button class=\"w3-btn w3-black\" onclick=\"document.getElementById('scoreModal').style.display='none'\">Close</button></p>"
+    }
+    else {
+        content += "<p>Would you like to <button class=\"w3-btn w3-black\" onclick=\"document.getElementById('scoreModal').style.display='none'\">try again</button>? Or <a class=\"w3-btn w3-black\" href=\"{1}\">reshuffle</a> answers?".format(seed, window.location.href.split('?')[0] + "?id=" + genSeed());
+    }
+
+    $('#scoreTable').html(content);
 }
 
 $(document).ready(setup);
