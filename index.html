@@ -1,9 +1,58 @@
----
-layout: default
-title: Home
----
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Music Scramble | Home</title>
+		<link rel="stylesheet" href="/css/w3.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="/css/fontawsomeFree5.1.0Web/css/all.css" />
+		<script src="/scripts/jquery-3.3.1.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.3/seedrandom.min.js"></script>
+    </head>
+    <body>
+        <h1>Music Scramble | Home</h1>
+		
+		<nav>
+			<div class="w3-bar w3-black">
+				  
+				  
+				  <a class="w3-bar-item w3-button w3-hide-small w3-gray"  href="/" alt="Home">Home</a>
+				  
+					
+					<a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/music/firstpiece/" alt="FirstPiece">FirstPiece</a>
+				  
+					
+					<a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/music/secondpiece/" alt="SecondPiece">SecondPiece</a>
+				  
+				  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-gray w3-right w3-hide-large w3-hide-medium" onclick="openMenu()">&#9776;</a>
+			</div>
+			
+			<div id="mobileMenu" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
+				
+				<a class="w3-bar-item w3-button w3-gray" href="/">Home</a></li>
+				
+					
+					<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/firstpiece/" alt="FirstPiece">FirstPiece</a></li> -->
+					<a class="w3-bar-item w3-button w3-hover-gray" href="/music/firstpiece/">FirstPiece</a></li>
+				
+					
+					<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/secondpiece/" alt="SecondPiece">SecondPiece</a></li> -->
+					<a class="w3-bar-item w3-button w3-hover-gray" href="/music/secondpiece/">SecondPiece</a></li>
+				
+			</div>
+		</nav>
+		<script>
+			function openMenu(){
+				$('#mobileMenu').toggleClass("w3-show");
+			}
+		</script>
 <div id="test"></div>
 <script>
 	Math.seedrandom('hello.');
 	$("#test").html('<p>' + Math.random() + '</p>');
 </script>
+
+
+    </body>
+</html>

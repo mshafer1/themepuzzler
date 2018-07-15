@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Music Scramble | FirstPiece</title>
+        <link rel="stylesheet" href="/css/w3.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="/css/sortableStyles.css" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="/css/fontawsomeFree5.1.0Web/css/all.css" />
+		<link rel="stylesheet" href="/css/jquery-ui.css">
+		<script src="/scripts/jquery-3.3.1.min.js"></script>
+		<script src="/scripts/jquery-ui.js"></script>
+		<script src="/scripts/jquery.ui.touch-punch.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.3/seedrandom.min.js"></script>
+		<script src="/scripts/draggableSlides.js"></script>
+		<script>
+			var pieces = [
+				
+					"/files/1a.mp3",
+				
+					"/files/1b.mp3",
+				
+					"/files/1c.mp3",
+				
+			]
+		</script>
+		<script src="/scripts/scrambler.js"></script>
+		<script>
+			$( function() {
+			  $( "#sortable" ).sortable();
+			  $( "#sortable" ).disableSelection();
+			} );
+		</script>
+    </head>
+    <body>
+        <h1>Music Scramble | FirstPiece</h1>
+		
+		<nav>
+			<div class="w3-bar w3-black">
+				  
+				  
+				  <a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/" alt="Home">Home</a>
+				  
+					
+					<a class="w3-bar-item w3-button w3-hide-small w3-gray"  href="/music/firstpiece/" alt="FirstPiece">FirstPiece</a>
+				  
+					
+					<a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/music/secondpiece/" alt="SecondPiece">SecondPiece</a>
+				  
+				  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-gray w3-right w3-hide-large w3-hide-medium" onclick="openMenu()">&#9776;</a>
+			</div>
+			
+			<div id="mobileMenu" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
+				
+				<a class="w3-bar-item w3-button w3-hover-gray" href="/">Home</a></li>
+				
+					
+					<!-- <li class="w3-hide-small"><a class="w3-gray"  href="/music/firstpiece/" alt="FirstPiece">FirstPiece</a></li> -->
+					<a class="w3-bar-item w3-button w3-gray" href="/music/firstpiece/">FirstPiece</a></li>
+				
+					
+					<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/secondpiece/" alt="SecondPiece">SecondPiece</a></li> -->
+					<a class="w3-bar-item w3-button w3-hover-gray" href="/music/secondpiece/">SecondPiece</a></li>
+				
+			</div>
+		</nav>
+		<script>
+			function openMenu(){
+				$('#mobileMenu').toggleClass("w3-show");
+			}
+		</script>
+
+		<!--  -->
+			<!-- <p>1a.mp3</p> -->
+		<!--  -->
+			<!-- <p>1b.mp3</p> -->
+		<!--  -->
+			<!-- <p>1c.mp3</p> -->
+		<!--  -->
+		<div class="w3-row-padding">
+			<div class="w3-col l6 s12">
+				To share this version, use this link: <span id="link"></span>
+			</div>
+			<div class="w3-col l6 s12">
+				To load a specific verion: 
+				<form>
+					<label>Request Version: 
+					<input type="text" name="id" id="idEntry" onClick="this.setSelectionRange(0, this.value.length)" required></label>
+					<button class="w3-btn w3-black">Load</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="w3-padding"></div>
+		
+		<div class="w3-row">
+			<div class="w3-col s12">
+				<a class="w3-btn w3-black" id="allPlayButton" onclick="playAll();">Play All <i id="allPlayButtonIcon" class="fas fa-play"></i></a>
+			</div>
+			
+		</div>
+
+		<div class="w3-content w3-padding all-slides" id="musicRegion">
+			
+
+
+			<div id="sortable" class="noselect">
+			
+			
+			
+				<!-- TODO: make font larger on mobile -->
+				<div class="sortRegion">
+					<span  id="row0" class="w3-center">
+						<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
+					</span>
+				</div>	
+
+				
+			
+				<!-- TODO: make font larger on mobile -->
+				<div class="sortRegion">
+					<span  id="row1" class="w3-center">
+						<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
+					</span>
+				</div>	
+
+				
+			
+				<!-- TODO: make font larger on mobile -->
+				<div class="sortRegion">
+					<span  id="row2" class="w3-center">
+						<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
+					</span>
+				</div>	
+
+				
+			
+			</div>
+		</div>
+    </body>
+</html>

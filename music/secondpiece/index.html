@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Music Scramble | {{ page.title }}</title>
+        <title>Music Scramble | SecondPiece</title>
         <link rel="stylesheet" href="/css/w3.css" />
         <link rel="stylesheet" href="/css/styles.css" />
         <link rel="stylesheet" href="/css/sortableStyles.css" />
@@ -16,9 +16,11 @@
 		<script src="/scripts/draggableSlides.js"></script>
 		<script>
 			var pieces = [
-				{% for item in page.pieces %}
-					"/files/{{ item }}",
-				{% endfor %}
+				
+					"/files/2a.mp3",
+				
+					"/files/2b.mp3",
+				
 			]
 		</script>
 		<script src="/scripts/scrambler.js"></script>
@@ -30,13 +32,48 @@
 		</script>
     </head>
     <body>
-        <h1>Music Scramble | {{ page.title }}</h1>
+        <h1>Music Scramble | SecondPiece</h1>
 		
-		{% include nav.html %}
+		<nav>
+			<div class="w3-bar w3-black">
+				  
+				  
+				  <a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/" alt="Home">Home</a>
+				  
+					
+					<a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/music/firstpiece/" alt="FirstPiece">FirstPiece</a>
+				  
+					
+					<a class="w3-bar-item w3-button w3-hide-small w3-gray"  href="/music/secondpiece/" alt="SecondPiece">SecondPiece</a>
+				  
+				  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-gray w3-right w3-hide-large w3-hide-medium" onclick="openMenu()">&#9776;</a>
+			</div>
+			
+			<div id="mobileMenu" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
+				
+				<a class="w3-bar-item w3-button w3-hover-gray" href="/">Home</a></li>
+				
+					
+					<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/firstpiece/" alt="FirstPiece">FirstPiece</a></li> -->
+					<a class="w3-bar-item w3-button w3-hover-gray" href="/music/firstpiece/">FirstPiece</a></li>
+				
+					
+					<!-- <li class="w3-hide-small"><a class="w3-gray"  href="/music/secondpiece/" alt="SecondPiece">SecondPiece</a></li> -->
+					<a class="w3-bar-item w3-button w3-gray" href="/music/secondpiece/">SecondPiece</a></li>
+				
+			</div>
+		</nav>
+		<script>
+			function openMenu(){
+				$('#mobileMenu').toggleClass("w3-show");
+			}
+		</script>
 
-		<!-- {% for item in page.pieces %} -->
-			<!-- <p>{{ item }}</p> -->
-		<!-- {% endfor %} -->
+		<!--  -->
+			<!-- <p>2a.mp3</p> -->
+		<!--  -->
+			<!-- <p>2b.mp3</p> -->
+		<!--  -->
 		<div class="w3-row-padding">
 			<div class="w3-col l6 s12">
 				To share this version, use this link: <span id="link"></span>
@@ -65,18 +102,27 @@
 
 
 			<div id="sortable" class="noselect">
-			{% assign entry = 0 %}
 			
-			{% for item in page.pieces %}
+			
+			
 				<!-- TODO: make font larger on mobile -->
 				<div class="sortRegion">
-					<span  id="row{{entry}}" class="w3-center">
+					<span  id="row0" class="w3-center">
 						<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
 					</span>
 				</div>	
 
-				{% assign entry = entry | plus: 1 %}
-			{% endfor %}
+				
+			
+				<!-- TODO: make font larger on mobile -->
+				<div class="sortRegion">
+					<span  id="row1" class="w3-center">
+						<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
+					</span>
+				</div>	
+
+				
+			
 			</div>
 		</div>
     </body>
