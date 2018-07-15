@@ -1,10 +1,31 @@
 ---
+# yaml allows for comments!
+
+# to add pages to the site, add an entry below
+#- title: {title of the page (no spaces, case sensitive)}
+#  pieces:
+#  - piece1.mp3
+#  - piece2.mp3
+# ...
+#  reviewed: false
+#  
+# a page that has a false value for reviewed will be created, but not included in the menu, allow for a sanity check first.
+# At this time, only mp3 file formats are supported by the site.
+# The piece list needs to be in the order that is considered correct.
+
 - title: FirstPiece
   pieces:
   - 1a.mp3
   - 1b.mp3
   - 1c.mp3
+  reviewed: true
 - title: SecondPiece
   pieces:
   - 2a.mp3
   - 2b.mp3
+  reviewed: true
+- title: exampleNotReviewedPage
+  pieces:
+  - 3b.mp3
+  - 3a.mp3
+

@@ -1,6 +1,6 @@
 <nav>
 			<div class="w3-bar w3-black">
-				  {% assign doclist = site.data.pages | sort: 'title'  %}
+				  {% assign doclist = site.data.pages | sort: 'title' | where: 'reviewed', 'true'  %}
 				  {% capture pagePath %}Home{% endcapture %}
 				  <a class="w3-bar-item w3-button w3-hide-small {% if page.title == pagePath %}w3-gray{% else %}w3-hover-gray{% endif %}"  href="/" alt="Home">Home</a>
 				  {% for item in doclist %}
