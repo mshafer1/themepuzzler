@@ -1,0 +1,14 @@
+.dragTarget {
+    min-height: 1em;
+}
+
+.receive {
+    min-height: 5em;
+    border: 1px solid black;
+}
+
+/* .slide {
+    position: relative;
+    margin: 0 0 0.75rem 0;
+    border: 1px solid black;
+} */

@@ -1,0 +1,9 @@
+page_gen:
+ - index_files: true
+   data: 'pages'
+   template: 'musicPage'
+   name: 'title'
+   dir: music
+destination: _site
+exclude: 
+    - buildSite.bat
