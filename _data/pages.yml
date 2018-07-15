@@ -13,6 +13,8 @@
 # At this time, only mp3 file formats are supported by the site.
 # The piece list needs to be in the order that is considered correct.
 
+# all pieces need to be files folder. Can be nested, but again no spaces in the paths and the case sensitive (and use forware / slashes)
+
 - title: FirstPiece
   pieces:
   - 1a.mp3
@@ -26,6 +28,6 @@
   reviewed: true
 - title: exampleNotReviewedPage
   pieces:
-  - 3b.mp3
+  - nested/file/that/is/not/really/there/3b.mp3
   - 3a.mp3
 
