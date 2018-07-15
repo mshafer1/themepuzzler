@@ -43,9 +43,9 @@ function replaceAll(str, find, replace) { // from https://stackoverflow.com/a/11
 }
 
 function load_get() { //originally from https:///stackoverflow.com/a/12049737
-    console.log("parsing get")
+    //console.log("parsing get")
     if (document.location.toString().indexOf('?') !== -1) {
-        console.log("found somethings in get string");
+        //console.log("found somethings in get string");
         var query = document.location
             .toString()
             // get the query string
@@ -59,9 +59,9 @@ function load_get() { //originally from https:///stackoverflow.com/a/12049737
             aux = decodeURIComponent(query[i])
                 //console.log(aux)
             key = aux.match(/([\d\D]+?\=)/)[0].replace('=', '');
-                console.log(key)
+                //console.log(key)
             value = aux.replace(key + "=", "")
-                console.log(value)
+                //console.log(value)
             if (key in GET) {
                 if (GET[key].constructor === Array) {
                     GET[key].push(value)
@@ -76,7 +76,7 @@ function load_get() { //originally from https:///stackoverflow.com/a/12049737
                 } else {
                     GET[key] = value;
                 }
-                console.log(key + ":" + GET[key])
+                //console.log(key + ":" + GET[key])
                 //console.log();
             }
         }
@@ -122,27 +122,27 @@ function setup() {
     load_get();
     if (jQuery.isEmptyObject(GET)) {
         // seed provided??
-        console.log("GET empty");
-        console.log(GET);
+        //console.log("GET empty");
+        //console.log(GET);
         
     }
     else {
         parseSeedFromGet();
     }
-    console.log("Seed: " + seed);
+    //console.log("Seed: " + seed);
     Math.seedrandom(seed);
     $('#idEntry').val(seed);
 
     var shuffled = shuffle(pieces);
     loadPlayers(shuffled);
 
-    console.log(pieces);
-    console.log(shuffled);
+    //console.log(pieces);
+    //console.log(shuffled);
 
     pieces.forEach(function(e, index) 
     {
         resultIndex = shuffled.indexOf(e);
-        console.log("Index: " + index + "\n\tMovedTo: " + resultIndex)
+        //console.log("Index: " + index + "\n\tMovedTo: " + resultIndex)
         answer += String.fromCharCode(CAP_A + resultIndex)}
     );
 
@@ -155,12 +155,12 @@ function setup() {
 
 function loadPlayers(array){
     array.forEach(function(element, index) {
-        console.log(index + ": " + element);
+        //console.log(index + ": " + element);
         label = String.fromCharCode(CAP_A + index);
-        console.log(label);
+        //console.log(label);
 
         $('#row' + index).html(genRow(label, index, element));
-        console.log(label);
+        //console.log(label);
 
     });
     $('.sortRegion i').click(function() {
@@ -169,7 +169,7 @@ function loadPlayers(array){
 }
 
 function genRow(name, index, audioPath){
-    console.log("index: " +index);
+    //console.log("index: " +index);
     return '    \
     <div class="slide" value="{0}" id="{1}"> \
         <audio id="player{1}" class="player" onended="stop(\'{1}\')"> \
@@ -203,11 +203,11 @@ function playAll(nextID = null) {
         playAll.idList = [];
         $('.slide').each(function(index) 
         {
-            console.log(index +  ": " + $(this).text() + " - " + $(this).attr("id"))
+            //console.log(index +  ": " + $(this).text() + " - " + $(this).attr("id"))
             playAll.idList.push($(this).attr("id"));
         });
         playAll.playing = true;
-        console.log($('.slide').first()[0]);
+        //console.log($('.slide').first()[0]);
         nextID = playAll.idList.shift();
     }
     audioElement = document.getElementById('player' + nextID);
@@ -226,7 +226,7 @@ function retrigger() {
 }
 
 function stop(id) {
-    console.log("stopping: " + id);
+    //console.log("stopping: " + id);
     var player = document.getElementById('player' + id);
     stopPlayer(player);
     $('#playButton' + id).removeClass("fa-pause").addClass("fa-play");
@@ -240,15 +240,15 @@ function stopPlayer(player) {
 }
 
 function checkAnswer() {
-    console.log('Answer: ' + answer);
+    //console.log('Answer: ' + answer);
 
     var result = "";
     $('.slide').each(function(index) 
     {
-        console.log(index +  ": " + $(this).text() + " - " + $(this).attr("value"))
+        //console.log(index +  ": " + $(this).text() + " - " + $(this).attr("value"))
         result += $(this).attr("value");
     });
-    console.log("result: " + result);
+    //console.log("result: " + result);
     return result;
 }
 
