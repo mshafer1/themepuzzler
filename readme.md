@@ -1,7 +1,7 @@
 # Theme Puzzler
 A basic setup to shuffle pieces of a musical theme and present on a website as a quiz or game.
 
-## See the [repo site](https://themepuzzler.musictheoryptractice.net/)
+## See the [repo site](https://themepuzzler.musictheorypractice.net/)
 for usage
 
 ## Contributing
