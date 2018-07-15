@@ -131,6 +131,7 @@ function setup() {
     }
     console.log("Seed: " + seed);
     Math.seedrandom(seed);
+    $('#idEntry').val(seed);
 
     var shuffled = shuffle(pieces);
     loadPlayers(shuffled);
@@ -171,7 +172,7 @@ function genRow(name, index, audioPath){
             <source src="{2}" type="audio/mpeg"/> \
         </audio> \
         <p>         \
-            <span style="em">{0}:</span> <i id="playButton{1}" class="fas fa-play w3-hover-text-gray" onclick="play(\'{1}\')"/> \
+            <span style="em">{0}:</span> <i id="playButton{1}" class="fas fa-play w3-hover-text-gray playButton" onclick="play(\'{1}\')"/> \
         </p>\
     </div> \
     '.format(name, index, audioPath)
@@ -246,4 +247,4 @@ function checkAnswer() {
     console.log("result: " + result);
 }
 
-$(window).on('load', setup);
+$(document).ready(setup);

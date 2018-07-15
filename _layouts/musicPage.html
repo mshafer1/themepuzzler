@@ -10,9 +10,10 @@
 		<link rel="stylesheet" href="/css/fontawsomeFree5.1.0Web/css/all.css" />
 		<link rel="stylesheet" href="/css/jquery-ui.css">
 		<script src="/scripts/jquery-3.3.1.min.js"></script>
-		<script src="/scripts/draggableSlides.js"></script>
 		<script src="/scripts/jquery-ui.js"></script>
+		<script src="/scripts/jquery.ui.touch-punch.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/seedrandom/2.4.3/seedrandom.min.js"></script>
+		<script src="/scripts/draggableSlides.js"></script>
 		<script>
 			var pieces = [
 				{% for item in page.pieces %}
@@ -36,39 +37,47 @@
 		<!-- {% for item in page.pieces %} -->
 			<!-- <p>{{ item }}</p> -->
 		<!-- {% endfor %} -->
-		<div class="w3-content w3padding" >
-			To share this quiz, use this link: <span id="link"></span>
+		<div class="w3-row-padding">
+			<div class="w3-col l6 s12">
+				To share this version, use this link: <span id="link"></span>
+			</div>
+			<div class="w3-col l6 s12">
+				To load a specific verion: 
+				<form>
+					<label>Request Version: 
+					<input type="text" name="id" id="idEntry" onClick="this.setSelectionRange(0, this.value.length)" required></label>
+					<button class="w3-btn w3-black">Load</button>
+				</form>
+			</div>
 		</div>
+
+		<div class="w3-padding"></div>
 		
-		<div>
-			<a class="w3-btn w3-black" id="allPlayButton" onclick="playAll();">Play All <i id="allPlayButtonIcon" class="fas fa-play"></i></a>
-			<br/>
+		<div class="w3-row">
+			<div class="w3-col s12">
+				<a class="w3-btn w3-black" id="allPlayButton" onclick="playAll();">Play All <i id="allPlayButtonIcon" class="fas fa-play"></i></a>
+			</div>
+			
 		</div>
 
 		<div class="w3-content w3-padding all-slides" id="musicRegion">
 			
 
 
-			<ul id="sortable">
+			<div id="sortable" class="noselect">
 			{% assign entry = 0 %}
 			
 			{% for item in page.pieces %}
-				<!-- <div class="w3-row "> -->
-					<!-- <!-- ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" -->
-					<!-- <div class="w3-col s12 dragTarget" ></div> -->
-				<!-- </div> -->
-				<!-- draggable="true" ondragstart="drag(event)" -->
-				<li>
-					<div id="row{{entry}}">
-						<div class="w3-center"><i class="fas fa-spinner fa-spin"></i></div> <!-- draggable row -->
-					</div>	
-				</li>
+				<!-- TODO: make font larger on mobile -->
+				<div class="sortRegion">
+					<span  id="row{{entry}}" class="w3-center">
+						<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
+					</span>
+				</div>	
+
 				{% assign entry = entry | plus: 1 %}
 			{% endfor %}
-			<!-- <div class="w3-row"> -->
-					<!-- <div class="w3-col s12 dragTarget" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></div> -->
-			<!-- </div> -->
-			</ul>
+			</div>
 		</div>
     </body>
 </html>
