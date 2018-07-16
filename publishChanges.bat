@@ -3,6 +3,12 @@ cls
 
 pushd %~dp0 || GOTO :ERROR
 
+REM get latest commit message
+set commitMessage=
+FOR /F "tokens=* USEBACKQ" %%F IN (`git log -n 1 --oneline`) DO (
+SET commitMessage=%%F
+)
+
 cd ..\themepuzzler || GOTO :ERROR
 
 REM double check on gh-pages branch
@@ -12,13 +18,18 @@ REM make sure all files are included
 git add -A || GOTO :ERROR
 
 REM  commit changes
-git commit -am "%date% %time%" || GOTO :ERROR
+
+
+git commit -am "%date% %time% %commitMessage%" || GOTO :ERROR
+REM echo %date% %time% %commitMessage%
 
 REM push to server
 git push origin gh-pages || GOTO :ERROR
 
-popd || GOTO :ERROR
+GOTO :FINISH
 
-GOTO :EOF
 :ERROR
 pause
+
+:FINISH
+popd
