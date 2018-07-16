@@ -176,7 +176,8 @@ function genRow(name, index, audioPath){
             <source src="{2}" type="audio/mpeg"/> \
         </audio> \
         <p>         \
-            <span style="em" draggable="false">{0}:</span> <i id="playButton{1}" class="fas fa-play w3-hover-text-gray playButton" onmousedown="event.preventDefault ? event.preventDefault() : event.returnValue = false" onclick="play(\'{1}\')"/> \
+            <span style="em" draggable="false">{0}:</span> \
+            <i id="playButton{1}" class="fas fa-play w3-hover-text-gray playButton" onclick="play(\'{1}\')" ontouchmove="event.preventDefault ? event.preventDefault() : event.returnValue = false; event.stopPropagation();"/> \
         </p>\
     </div> \
     '.format(name, index, audioPath)
