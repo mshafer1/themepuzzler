@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Theme Puzzler | exampleNotReviewedPage</title>
+        <title>Theme Puzzler | ThirdPiece</title>
         <link rel="stylesheet" href="/css/w3.css" />
         <link rel="stylesheet" href="/css/styles.css" />
         <link rel="stylesheet" href="/css/sortableStyles.css" />
@@ -17,9 +17,11 @@
 		<script>
 			var pieces = [
 				
-					"/files/nested/file/that/is/not/really/there/3b.mp3",
-				
 					"/files/3a.mp3",
+				
+					"/files/3b.mp3",
+				
+					"/files/3c.mp3",
 				
 			];
 
@@ -33,7 +35,7 @@
 		</script>
     </head>
     <body>
-        <h1>Theme Puzzler | exampleNotReviewedPage</h1>
+        <h1>Theme Puzzler | ThirdPiece</h1>
 		
 		<nav>
 			<div class="w3-bar w3-black">
@@ -49,7 +51,7 @@
 					<a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/music/secondpiece/" alt="SecondPiece">SecondPiece</a>
 				  
 					
-					<a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/music/thirdpiece/" alt="ThirdPiece">ThirdPiece</a>
+					<a class="w3-bar-item w3-button w3-hide-small w3-gray"  href="/music/thirdpiece/" alt="ThirdPiece">ThirdPiece</a>
 				  
 				  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-gray w3-right w3-hide-large w3-hide-medium" onclick="openMenu()">&#9776;</a>
 			</div>
@@ -67,8 +69,8 @@
 					<a class="w3-bar-item w3-button w3-hover-gray" href="/music/secondpiece/">SecondPiece</a></li>
 				
 					
-					<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/thirdpiece/" alt="ThirdPiece">ThirdPiece</a></li> -->
-					<a class="w3-bar-item w3-button w3-hover-gray" href="/music/thirdpiece/">ThirdPiece</a></li>
+					<!-- <li class="w3-hide-small"><a class="w3-gray"  href="/music/thirdpiece/" alt="ThirdPiece">ThirdPiece</a></li> -->
+					<a class="w3-bar-item w3-button w3-gray" href="/music/thirdpiece/">ThirdPiece</a></li>
 				
 			</div>
 		</nav>
@@ -79,9 +81,11 @@
 		</script>
 
 		<!--  -->
-			<!-- <p>nested/file/that/is/not/really/there/3b.mp3</p> -->
-		<!--  -->
 			<!-- <p>3a.mp3</p> -->
+		<!--  -->
+			<!-- <p>3b.mp3</p> -->
+		<!--  -->
+			<!-- <p>3c.mp3</p> -->
 		<!--  -->
 		<div class="w3-row-padding">
 			<div class="w3-col l6 s12">
@@ -123,6 +127,15 @@
 				<!-- TODO: make font larger on mobile -->
 				<div class="sortRegion">
 					<span  id="row1" class="w3-center">
+						<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
+					</span>
+				</div>	
+
+				
+			
+				<!-- TODO: make font larger on mobile -->
+				<div class="sortRegion">
+					<span  id="row2" class="w3-center">
 						<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
 					</span>
 				</div>	
