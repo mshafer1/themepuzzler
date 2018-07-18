@@ -7,3 +7,4 @@ page_gen:
 destination: _site
 exclude: 
     - buildSite.bat
+    - publishChanges.bat
