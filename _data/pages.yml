@@ -15,29 +15,56 @@
 
 # all pieces need to be files folder. Can be nested, but again no spaces in the paths and the case sensitive (and use forware / slashes)
 
-- title: FirstPiece
+- title: Pineapple_Rag_Part1
   pieces:
-  - 1a.mp3
-  - 1b.mp3
-  - 1c.mp3
-  reviewed: true
-- title: SecondPiece
+  - pineapple_a1.mp3
+  - pineapple_a2.mp3
+  - pineapple_a3.mp3
+- title: Pineapple_Rag_Part2
   pieces:
-  - 2a.mp3
-  - 2b.mp3
-  reviewed: true
-- title: ThirdPiece
+  - pineapple_b1.mp3
+  - pineapple_b2.mp3
+- title: Mozart_K331_Part1
   pieces:
-  - 3a.mp3
-  - 3b.mp3
-  - 3c.mp3
-  reviewed: true
-- title: FourthPiece
+  - mozart331_a.mp3
+  - mozart331_b.mp3
+  - mozart331_c.mp3
+- title: Mozart_K331_Part2
   pieces:
-  - 4a.mp3
-  - 4b.mp3
+  - mozart331_2a.mp3
+  - mozart331_2b.mp3
+- title: Haydn_Trio
+  pieces:
+  - haydn_trio_a.mp3
+  - haydn_trio_b.mp3
+- title: Beethoven_Sonata 
+  pieces:
+  - beethoven2_1_a.mp3
+  - beethoven2_1_b.mp3
+  - beethoven2_1_c.mp3
+- title: Haydn_Symphony
+  pieces:
+  - haydn100_a.mp3
+  - haydn100_b.mp3
+- title: Mozart_K311
+  pieces:
+  - mozart311_a.mp3
+  - mozart311_b.mp3
+- title: Mozart_K459
+  pieces:
+  - mozart459_a.mp3
+  - mozart459_b.mp3
+- title: Beethoven_Symphony5
+  pieces:
+  - beethoven5_a.mp3
+  - beethoven5_b.mp3
+  - beethoven5_c.mp3
+- title: Mozart_K564
+  pieces:
+  - mozart564_a.mp3
+  - mozart564_b.mp3
+  - mozart564_c.mp3
 - title: exampleNotReviewedPage
   pieces:
   - nested/file/that/is/not/really/there/3b.mp3
   - 3a.mp3
-
