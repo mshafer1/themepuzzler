@@ -75,7 +75,3 @@
   - mozart564_b.mp3
   - mozart564_c.mp3
   reviewed: true
-- title: exampleNotReviewedPage
-  pieces:
-  - nested/file/that/is/not/really/there/3b.mp3
-  - 3a.mp3
