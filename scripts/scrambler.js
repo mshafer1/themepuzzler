@@ -43,6 +43,7 @@ function replaceAll(str, find, replace) { // from https://stackoverflow.com/a/11
 }
 
 function load_get() { //originally from https:///stackoverflow.com/a/12049737
+    GET = {};
     //console.log("parsing get")
     if (document.location.toString().indexOf('?') !== -1) {
         //console.log("found somethings in get string");
@@ -89,8 +90,9 @@ function genSeed(){
 
 
 function parseSeedFromGet() {
+    // get the id integer stored in the GET array
     if('id' in GET) {
-        seed = GET['id'];
+        seed = parseInt(GET['id']);
     }
 }
 
@@ -117,18 +119,20 @@ function shuffle(array) {
 
 
 function setup() {
+    answer = "";
+
     Math.seedrandom();
     seed = genSeed();
     load_get();
     if (jQuery.isEmptyObject(GET)) {
-        // seed provided??
+        // seed provided
         //console.log("GET empty");
         //console.log(GET);
-        
     }
     else {
         parseSeedFromGet();
     }
+    
     //console.log("Seed: " + seed);
     Math.seedrandom(seed);
     $('#idEntry').val(seed);
@@ -137,7 +141,7 @@ function setup() {
     loadPlayers(shuffled);
 
     //console.log(pieces);
-    //console.log(shuffled);
+    console.log(shuffled);
 
     pieces.forEach(function(e, index) 
     {
