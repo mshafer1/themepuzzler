@@ -20,47 +20,58 @@
   - pineapple_a1.mp3
   - pineapple_a2.mp3
   - pineapple_a3.mp3
+  reviewed: true
 - title: Pineapple_Rag_Part2
   pieces:
   - pineapple_b1.mp3
   - pineapple_b2.mp3
+  reviewed: true
 - title: Mozart_K331_Part1
   pieces:
   - mozart331_a.mp3
   - mozart331_b.mp3
   - mozart331_c.mp3
+  reviewed: true
 - title: Mozart_K331_Part2
   pieces:
   - mozart331_2a.mp3
   - mozart331_2b.mp3
+  reviewed: true
 - title: Haydn_Trio
   pieces:
   - haydn_trio_a.mp3
   - haydn_trio_b.mp3
+  reviewed: true
 - title: Beethoven_Sonata 
   pieces:
   - beethoven2_1_a.mp3
   - beethoven2_1_b.mp3
   - beethoven2_1_c.mp3
+  reviewed: true
 - title: Haydn_Symphony
   pieces:
   - haydn100_a.mp3
   - haydn100_b.mp3
+  reviewed: true
 - title: Mozart_K311
   pieces:
   - mozart311_a.mp3
   - mozart311_b.mp3
+  reviewed: true
 - title: Mozart_K459
   pieces:
   - mozart459_a.mp3
   - mozart459_b.mp3
+  reviewed: true
 - title: Beethoven_Symphony5
   pieces:
   - beethoven5_a.mp3
   - beethoven5_b.mp3
   - beethoven5_c.mp3
+  reviewed: true
 - title: Mozart_K564
   pieces:
   - mozart564_a.mp3
   - mozart564_b.mp3
   - mozart564_c.mp3
+  reviewed: true
