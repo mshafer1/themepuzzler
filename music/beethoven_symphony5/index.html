@@ -35,181 +35,290 @@
 		</script>
     </head>
     <body>
-        <h1>Theme Puzzler | Beethoven_Symphony5</h1>
+		<!-- | sort: 'title' -->
+
+<nav class="w3-sidebar w3-bar-block w3-black w3-left-align w3-collapse w3-top" style="width: 250px;" id="sideBar">
+	<div class="w3-container w3-display-container w3-padding-16 w3-dark-grey">
+		<i onclick="hide_menu()" class="fas fa-times w3-hide-large w3-button w3-display-topright"></i>
+		<h3 class="w3-dark-grey">Menu</h3>
+	</div>
+	<div class="w3-padding-32 w3-large">
 		
-		<nav>
-			<div class="w3-bar w3-black">
-					<!-- | sort: 'title' -->
-				  
-				  
-				  <a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/" alt="Home">Home</a>
-				  
-					
-					<a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/music/pineapple_rag_part1/" alt="Pineapple_Rag_Part1">Pineapple_Rag_Part1</a>
-				  
-					
-					<a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/music/pineapple_rag_part2/" alt="Pineapple_Rag_Part2">Pineapple_Rag_Part2</a>
-				  
-					
-					<a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/music/mozart_k331_part1/" alt="Mozart_K331_Part1">Mozart_K331_Part1</a>
-				  
-					
-					<a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/music/mozart_k331_part2/" alt="Mozart_K331_Part2">Mozart_K331_Part2</a>
-				  
-					
-					<a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/music/haydn_trio/" alt="Haydn_Trio">Haydn_Trio</a>
-				  
-					
-					<a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/music/beethoven_sonata/" alt="Beethoven_Sonata">Beethoven_Sonata</a>
-				  
-					
-					<a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/music/haydn_symphony/" alt="Haydn_Symphony">Haydn_Symphony</a>
-				  
-					
-					<a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/music/mozart_k311/" alt="Mozart_K311">Mozart_K311</a>
-				  
-					
-					<a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/music/mozart_k459/" alt="Mozart_K459">Mozart_K459</a>
-				  
-					
-					<a class="w3-bar-item w3-button w3-hide-small w3-gray"  href="/music/beethoven_symphony5/" alt="Beethoven_Symphony5">Beethoven_Symphony5</a>
-				  
-					
-					<a class="w3-bar-item w3-button w3-hide-small w3-hover-gray"  href="/music/mozart_k564/" alt="Mozart_K564">Mozart_K564</a>
-				  
-				  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-gray w3-right w3-hide-large w3-hide-medium" onclick="openMenu()"><i class="fas fa-bars"></i></a>
-			</div>
-			
-			<div id="mobileMenu" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
-				
-				<a class="w3-bar-item w3-button w3-hover-gray" href="/">Home</a></li>
-				
-					
-					<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/pineapple_rag_part1/" alt="Pineapple_Rag_Part1">Pineapple_Rag_Part1</a></li> -->
-					<a class="w3-bar-item w3-button w3-hover-gray" href="/music/pineapple_rag_part1/">Pineapple_Rag_Part1</a></li>
-				
-					
-					<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/pineapple_rag_part2/" alt="Pineapple_Rag_Part2">Pineapple_Rag_Part2</a></li> -->
-					<a class="w3-bar-item w3-button w3-hover-gray" href="/music/pineapple_rag_part2/">Pineapple_Rag_Part2</a></li>
-				
-					
-					<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/mozart_k331_part1/" alt="Mozart_K331_Part1">Mozart_K331_Part1</a></li> -->
-					<a class="w3-bar-item w3-button w3-hover-gray" href="/music/mozart_k331_part1/">Mozart_K331_Part1</a></li>
-				
-					
-					<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/mozart_k331_part2/" alt="Mozart_K331_Part2">Mozart_K331_Part2</a></li> -->
-					<a class="w3-bar-item w3-button w3-hover-gray" href="/music/mozart_k331_part2/">Mozart_K331_Part2</a></li>
-				
-					
-					<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/haydn_trio/" alt="Haydn_Trio">Haydn_Trio</a></li> -->
-					<a class="w3-bar-item w3-button w3-hover-gray" href="/music/haydn_trio/">Haydn_Trio</a></li>
-				
-					
-					<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/beethoven_sonata/" alt="Beethoven_Sonata">Beethoven_Sonata</a></li> -->
-					<a class="w3-bar-item w3-button w3-hover-gray" href="/music/beethoven_sonata/">Beethoven_Sonata</a></li>
-				
-					
-					<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/haydn_symphony/" alt="Haydn_Symphony">Haydn_Symphony</a></li> -->
-					<a class="w3-bar-item w3-button w3-hover-gray" href="/music/haydn_symphony/">Haydn_Symphony</a></li>
-				
-					
-					<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/mozart_k311/" alt="Mozart_K311">Mozart_K311</a></li> -->
-					<a class="w3-bar-item w3-button w3-hover-gray" href="/music/mozart_k311/">Mozart_K311</a></li>
-				
-					
-					<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/mozart_k459/" alt="Mozart_K459">Mozart_K459</a></li> -->
-					<a class="w3-bar-item w3-button w3-hover-gray" href="/music/mozart_k459/">Mozart_K459</a></li>
-				
-					
-					<!-- <li class="w3-hide-small"><a class="w3-gray"  href="/music/beethoven_symphony5/" alt="Beethoven_Symphony5">Beethoven_Symphony5</a></li> -->
-					<a class="w3-bar-item w3-button w3-gray" href="/music/beethoven_symphony5/">Beethoven_Symphony5</a></li>
-				
-					
-					<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/mozart_k564/" alt="Mozart_K564">Mozart_K564</a></li> -->
-					<a class="w3-bar-item w3-button w3-hover-gray" href="/music/mozart_k564/">Mozart_K564</a></li>
-				
-			</div>
-		</nav>
-		<script>
-			function openMenu(){
-				$('#mobileMenu').toggleClass("w3-show");
-			}
-		</script>
-
-		<!--  -->
-			<!-- <p>beethoven5_a.mp3</p> -->
-		<!--  -->
-			<!-- <p>beethoven5_b.mp3</p> -->
-		<!--  -->
-			<!-- <p>beethoven5_c.mp3</p> -->
-		<!--  -->
-		<div class="w3-row-padding">
-			<div class="w3-col l6 s12">
-				To share this version, use this link: <span id="link"></span>
-			</div>
-			<div class="w3-col l6 s12">
-				To load a specific verion: 
-				<form>
-					<label>Request Version: 
-					<input type="text" name="id" id="idEntry" onClick="this.setSelectionRange(0, this.value.length)" required></label>
-					<button class="w3-btn w3-black">Load</button>
-				</form>
-			</div>
-		</div>
-
-		<div class="w3-padding"></div>
+		<a href="/" class="w3-bar-item w3-button w3-hover-gray"  alt="Home">Home</a>
 		
-		<div class="w3-row">
-			<div class="w3-col s12">
-				<a class="w3-btn w3-black" id="allPlayButton" onclick="playAll();">Play All <i id="allPlayButtonIcon" class="fas fa-play"></i></a>
-			</div>			
-		</div>
+			
+			<a href="/music/pineapple_rag_part1/" class="w3-bar-item w3-button w3-hover-gray"  alt="Pineapple_Rag_Part1">Pineapple_Rag_Part1</a>
+		
+			
+			<a href="/music/pineapple_rag_part2/" class="w3-bar-item w3-button w3-hover-gray"  alt="Pineapple_Rag_Part2">Pineapple_Rag_Part2</a>
+		
+			
+			<a href="/music/mozart_k331_part1/" class="w3-bar-item w3-button w3-hover-gray"  alt="Mozart_K331_Part1">Mozart_K331_Part1</a>
+		
+			
+			<a href="/music/mozart_k331_part2/" class="w3-bar-item w3-button w3-hover-gray"  alt="Mozart_K331_Part2">Mozart_K331_Part2</a>
+		
+			
+			<a href="/music/haydn_trio/" class="w3-bar-item w3-button w3-hover-gray"  alt="Haydn_Trio">Haydn_Trio</a>
+		
+			
+			<a href="/music/beethoven_sonata/" class="w3-bar-item w3-button w3-hover-gray"  alt="Beethoven_Sonata">Beethoven_Sonata</a>
+		
+			
+			<a href="/music/haydn_symphony/" class="w3-bar-item w3-button w3-hover-gray"  alt="Haydn_Symphony">Haydn_Symphony</a>
+		
+			
+			<a href="/music/mozart_k311/" class="w3-bar-item w3-button w3-hover-gray"  alt="Mozart_K311">Mozart_K311</a>
+		
+			
+			<a href="/music/mozart_k459/" class="w3-bar-item w3-button w3-hover-gray"  alt="Mozart_K459">Mozart_K459</a>
+		
+			
+			<a href="/music/beethoven_symphony5/" class="w3-bar-item w3-button w3-gray"  alt="Beethoven_Symphony5">Beethoven_Symphony5</a>
+		
+			
+			<a href="/music/mozart_k564/" class="w3-bar-item w3-button w3-hover-gray"  alt="Mozart_K564">Mozart_K564</a>
+		
+	</div>
+</nav>
 
-		<div class="w3-content w3-padding" id="musicRegion">
+<div style="height: 0px;" class="filler"></div>
 
-			<div id="sortable" class="noselect w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border" style="cursor: -webkit-grab;">
-			
-			
-			
-				<!-- TODO: make font larger on mobile -->
-				<div class="sortRegion">
-					<span  id="row0" class="w3-center">
-						<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
-					</span>
-				</div>	
+<div id="mobileMenu" class="w3-bar-block w3-black w3-hide-large w3-hide w3-animate-top">
+	
+	<a class="w3-bar-item w3-button w3-hover-gray" href="/">Home</a>
+	
+		
+		<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/pineapple_rag_part1/" alt="Pineapple_Rag_Part1">Pineapple_Rag_Part1</a></li> -->
+		<a class="w3-bar-item w3-button w3-hover-gray" href="/music/pineapple_rag_part1/">Pineapple_Rag_Part1</a>
+	
+		
+		<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/pineapple_rag_part2/" alt="Pineapple_Rag_Part2">Pineapple_Rag_Part2</a></li> -->
+		<a class="w3-bar-item w3-button w3-hover-gray" href="/music/pineapple_rag_part2/">Pineapple_Rag_Part2</a>
+	
+		
+		<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/mozart_k331_part1/" alt="Mozart_K331_Part1">Mozart_K331_Part1</a></li> -->
+		<a class="w3-bar-item w3-button w3-hover-gray" href="/music/mozart_k331_part1/">Mozart_K331_Part1</a>
+	
+		
+		<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/mozart_k331_part2/" alt="Mozart_K331_Part2">Mozart_K331_Part2</a></li> -->
+		<a class="w3-bar-item w3-button w3-hover-gray" href="/music/mozart_k331_part2/">Mozart_K331_Part2</a>
+	
+		
+		<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/haydn_trio/" alt="Haydn_Trio">Haydn_Trio</a></li> -->
+		<a class="w3-bar-item w3-button w3-hover-gray" href="/music/haydn_trio/">Haydn_Trio</a>
+	
+		
+		<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/beethoven_sonata/" alt="Beethoven_Sonata">Beethoven_Sonata</a></li> -->
+		<a class="w3-bar-item w3-button w3-hover-gray" href="/music/beethoven_sonata/">Beethoven_Sonata</a>
+	
+		
+		<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/haydn_symphony/" alt="Haydn_Symphony">Haydn_Symphony</a></li> -->
+		<a class="w3-bar-item w3-button w3-hover-gray" href="/music/haydn_symphony/">Haydn_Symphony</a>
+	
+		
+		<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/mozart_k311/" alt="Mozart_K311">Mozart_K311</a></li> -->
+		<a class="w3-bar-item w3-button w3-hover-gray" href="/music/mozart_k311/">Mozart_K311</a>
+	
+		
+		<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/mozart_k459/" alt="Mozart_K459">Mozart_K459</a></li> -->
+		<a class="w3-bar-item w3-button w3-hover-gray" href="/music/mozart_k459/">Mozart_K459</a>
+	
+		
+		<!-- <li class="w3-hide-small"><a class="w3-gray"  href="/music/beethoven_symphony5/" alt="Beethoven_Symphony5">Beethoven_Symphony5</a></li> -->
+		<a class="w3-bar-item w3-button w3-gray" href="/music/beethoven_symphony5/">Beethoven_Symphony5</a>
+	
+		
+		<!-- <li class="w3-hide-small"><a class="w3-hover-gray"  href="/music/mozart_k564/" alt="Mozart_K564">Mozart_K564</a></li> -->
+		<a class="w3-bar-item w3-button w3-hover-gray" href="/music/mozart_k564/">Mozart_K564</a>
+	
+</div>
 
-				
-			
-				<!-- TODO: make font larger on mobile -->
-				<div class="sortRegion">
-					<span  id="row1" class="w3-center">
-						<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
-					</span>
-				</div>	
+<header class="w3-bar w3-top w3-hide-large w3-black" id="mobileMenuContainer">
+		<div class="w3-bar-item w3-padding-24 w3-wide">Theme Puzzler | Beethoven_Symphony5</div>
+		<a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="toggle_menu()"><i class="fa fa-bars"></i></a>
+</header>
 
-				
-			
-				<!-- TODO: make font larger on mobile -->
-				<div class="sortRegion">
-					<span  id="row2" class="w3-center">
-						<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
-					</span>
-				</div>	
 
-				
-			
+
+<script>
+		$(document).ready(function() {
+
+		setHeight($('.filler'), $('#mobileMenuContainer'));
+
+
+		// When the window is resized the height might
+		// change depending on content. So to be safe
+		// we rerun the function
+		$(window).resize(function() {
+			setHeight($('.filler'), $('#mobileMenuContainer'));
+			// setHeight($('.missHeader'), $('#mobileMenuContainer'));        
+		});
+
+	});
+
+	// sets height of element 1 to equal the height of element 2
+	function setHeight(elem1, elem2) {
+		console.log("resize");
+		var height = elem2.height();
+		
+		elem1.css('height', height); 
+	}
+
+	// set the padding of element 1 to equal the height of element 2
+	function setPadding(elem1, elem2) {
+		var height = elem2.height();
+		elem1.css('padding-top', height);
+	}
+</script>
+
+<script>
+	function toggle_menu() {
+		$('#mobileMenu').toggleClass("w3-show");
+	}
+
+	function show_menu() {
+		console.log("Menu open")
+		// $('#sideBar').addClass("w3-show");
+		// $('#myOverlay').addClass("w3-show")
+		$('#mobileMenu').addClass("w3-show");
+	}
+
+	function hide_menu() {
+		// $('#sideBar').removeClass("w3-show");
+		// $('#myOverlay').removeClass("w3-show");
+		$('#mobileMenu').removeClass("w3-show");
+	}
+</script>
+
+
+
+
+
+
+
+
+
+	<!-- sideNav
+	<!-- <img src="/favicon.ico" alt="Logo" style="width:90%; margin: 10px;"/> --
+	
+	<a class="w3-padding w3-hover-gray" href="/" alt="Home">Home</a>
+	
+		
+		<a class="w3-padding w3-hover-gray" href="/music/pineapple_rag_part1/" alt="Pineapple_Rag_Part1">Pineapple_Rag_Part1</a>
+	
+		
+		<a class="w3-padding w3-hover-gray" href="/music/pineapple_rag_part2/" alt="Pineapple_Rag_Part2">Pineapple_Rag_Part2</a>
+	
+		
+		<a class="w3-padding w3-hover-gray" href="/music/mozart_k331_part1/" alt="Mozart_K331_Part1">Mozart_K331_Part1</a>
+	
+		
+		<a class="w3-padding w3-hover-gray" href="/music/mozart_k331_part2/" alt="Mozart_K331_Part2">Mozart_K331_Part2</a>
+	
+		
+		<a class="w3-padding w3-hover-gray" href="/music/haydn_trio/" alt="Haydn_Trio">Haydn_Trio</a>
+	
+		
+		<a class="w3-padding w3-hover-gray" href="/music/beethoven_sonata/" alt="Beethoven_Sonata">Beethoven_Sonata</a>
+	
+		
+		<a class="w3-padding w3-hover-gray" href="/music/haydn_symphony/" alt="Haydn_Symphony">Haydn_Symphony</a>
+	
+		
+		<a class="w3-padding w3-hover-gray" href="/music/mozart_k311/" alt="Mozart_K311">Mozart_K311</a>
+	
+		
+		<a class="w3-padding w3-hover-gray" href="/music/mozart_k459/" alt="Mozart_K459">Mozart_K459</a>
+	
+		
+		<a class="w3-padding w3-gray" href="/music/beethoven_symphony5/" alt="Beethoven_Symphony5">Beethoven_Symphony5</a>
+	
+		
+		<a class="w3-padding w3-hover-gray" href="/music/mozart_k564/" alt="Mozart_K564">Mozart_K564</a>
+	
+	<!-- <a class="w3-padding w3-hover-black" href="/type-def/">Type-def</a>	 --
+</nav>
+
+ -->
+
+		<div class="bodyMain">
+			<h1 class="w3-hide-small w3-hide-medium">Theme Puzzler | Beethoven_Symphony5</h1>
+			<!--  -->
+				<!-- <p>beethoven5_a.mp3</p> -->
+			<!--  -->
+				<!-- <p>beethoven5_b.mp3</p> -->
+			<!--  -->
+				<!-- <p>beethoven5_c.mp3</p> -->
+			<!--  -->
+			<div class="w3-row-padding">
+				<div class="w3-col l6 s12">
+					To share this version, use this link: <span id="link"></span>
+				</div>
+				<div class="w3-col l6 s12">
+					To load a specific verion: 
+					<form>
+						<label>Request Version: 
+						<input type="text" name="id" id="idEntry" onClick="this.setSelectionRange(0, this.value.length)" required></label>
+						<button class="w3-btn w3-black">Load</button>
+					</form>
+				</div>
 			</div>
-		</div>
-		<div class="w3-center w3-container">
-			<button class="w3-btn w3-black" onclick="checkScore();">Check Score</button>
-			<div id="scoreModal" class="w3-modal">
-				<div class="w3-modal-content">
-					<div class="w3-card">
-						<header class="w3-container w3-black">
-								<span onclick="document.getElementById('scoreModal').style.display='none'" class="w3-button w3-right w3-black w3-hover-red">&times;</span>
-						</header>
-						<div id="scoreTable" class="w3-container w3-center">
-								<i class="fas fa-spinner fa-spin"></i>
+
+			<div class="w3-padding"></div>
+			
+			<div class="w3-row">
+				<div class="w3-col s12">
+					<a class="w3-btn w3-black" id="allPlayButton" onclick="playAll();">Play All <i id="allPlayButtonIcon" class="fas fa-play"></i></a>
+				</div>			
+			</div>
+
+			<div class="w3-content w3-padding" id="musicRegion">
+
+				<div id="sortable" class="noselect w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border" style="cursor: -webkit-grab;">
+				
+				
+				
+					<!-- TODO: make font larger on mobile -->
+					<div class="sortRegion">
+						<span  id="row0" class="w3-center">
+							<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
+						</span>
+					</div>	
+
+					
+				
+					<!-- TODO: make font larger on mobile -->
+					<div class="sortRegion">
+						<span  id="row1" class="w3-center">
+							<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
+						</span>
+					</div>	
+
+					
+				
+					<!-- TODO: make font larger on mobile -->
+					<div class="sortRegion">
+						<span  id="row2" class="w3-center">
+							<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
+						</span>
+					</div>	
+
+					
+				
+				</div>
+			</div>
+			<div class="w3-center w3-container">
+				<button class="w3-btn w3-black" onclick="checkScore();">Check Score</button>
+				<div id="scoreModal" class="w3-modal">
+					<div class="w3-modal-content">
+						<div class="w3-card">
+							<header class="w3-container w3-blue">
+									<span onclick="document.getElementById('scoreModal').style.display='none'" class="w3-button w3-right w3-blue w3-hover-black">&times;</span>
+							</header>
+							<div id="scoreTable" class="w3-container w3-center">
+									<i class="fas fa-spinner fa-spin"></i>
+							</div>
 						</div>
 					</div>
 				</div>

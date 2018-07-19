@@ -53,6 +53,10 @@
     cursor: -webkit-grabbing;
 }
 
+.w3-sidebar {
+    width: 30%;
+}
+
 @media (max-width: 623px) {
     html {
         font-size: 64px;
@@ -61,5 +65,16 @@
     .slide {
         min-height: 24px;
         font-size: 48px;
+    }
+}
+
+.bodyMain {
+    margin-left: 0px;
+    display: block;
+}
+
+@media (min-width: 995px) {
+    .bodyMain {
+        margin-left: 275px;
     }
 }
