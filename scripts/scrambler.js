@@ -175,23 +175,26 @@ function loadPlayers(array){
 function genRow(name, index, audioPath){
     //console.log("index: " +index);
     return '    \
-    <div class="slide" value="{0}" id="{1}"> \
-        <audio id="player{1}" class="player" onended="stop(\'{1}\')"> \
-            <source src="{2}" type="audio/mpeg"/> \
-        </audio> \
-        <p>         \
-            <span style="em" draggable="false">{0}:</span> \
-            <i id="playButton{1}" class="fas fa-play w3-hover-text-gray playButton" onclick="play(\'{1}\')" ontouchmove="event.preventDefault ? event.preventDefault() : event.returnValue = false; event.stopPropagation();"/> \
-        </p>\
+    <div class="slide w3-row-padding w3-padding" value="{0}" id="{1}"> \
+        <div class="w3-col s3 m1"> \
+            <i class="fas fa-grip-vertical"></i> \
+        </div> \
+        <div class="w3-col s3 m1"> \
+            <span style="em">{0}</span> \
+        </div> \
+        <div class="w3-col s5 m1"> \
+            <audio id="player{1}" class="player" onended="stop(\'{1}\')"> \
+                <source src="{2}" type="audio/mpeg"/> \
+            </audio> \
+                <i id="playButton{1}" class="fas fa-play w3-hover-text-gray playButton" onclick="play(\'{1}\')" ontouchmove="event.preventDefault ? event.preventDefault() : event.returnValue = false; event.stopPropagation();" ondragstart="stopAll();"/> \
+        </div> \
     </div> \
     '.format(name, index, audioPath)
 }
 
 function play(id) {
     // TODO: make sure all others are stopped
-    $('.player').each(function(id) {
-        stop(id);
-    })
+    stopAll();
     var player = document.getElementById('player' + id);
     player.play();
     removeEventListener("ended", stop, false)
@@ -200,6 +203,12 @@ function play(id) {
     // }, false);
     $('#playButton' + id).removeClass("fa-play").addClass("fa-pause");
     $('#playButton' + id).attr("onclick", "stop('" + id + "')");
+}
+
+function stopAll() {
+    $('.player').each(function(id) {
+        stop(id);
+    })
 }
 
 function playAll(nextID = null) {

@@ -13,8 +13,9 @@
     border: 1px solid black;
 } */
 
-.sortRegion {
-    cursor: ns-resize;
+.musicRegion {
+    /* cursor: ns-resize; */
+    cursor: grab;
 }
 
 .playButton {
@@ -34,6 +35,26 @@
 .slide {
     min-height: 24px;
     font-size: 24px;
+    background: white;
+    cursor: grab;
+}
+
+.slide .fa-grip-vertical {
+    cursor: ns-resize;
+}
+
+.slide:hover {
+    border: 1px solid black;
+}
+
+.slide:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.w3-sidebar {
+    width: 30%;
 }
 
 @media (max-width: 623px) {
