@@ -154,7 +154,7 @@ function setup() {
     if (document.location.toString().indexOf('?') !== -1) {
         link = document.location.toString();
     }
-    $('#link').html('<a href="{0}">{0}</a>'.format(link));
+    $('#link').html('<a href="{0}">{1}?id={2}</a>'.format(link,  window.location.pathname, seed));
 }
 
 function loadPlayers(array){
