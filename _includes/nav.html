@@ -1,28 +1,106 @@
-<nav>
-			<div class="w3-bar w3-black">
-					<!-- | sort: 'title' -->
-				  {% assign doclist = site.data.pages | where: 'reviewed', 'true'  %}
-				  {% capture pagePath %}Home{% endcapture %}
-				  <a class="w3-bar-item w3-button w3-hide-small {% if page.title == pagePath %}w3-gray{% else %}w3-hover-gray{% endif %}"  href="/" alt="Home">Home</a>
-				  {% for item in doclist %}
-					{% capture pagePath %}/{{ "music/" | append: item.title | downcase }}/{% endcapture %}
-					<a class="w3-bar-item w3-button w3-hide-small {% if page.url == pagePath %}w3-gray{% else %}w3-hover-gray{% endif %}"  href="{{ pagePath | downcase }}" alt="{{ item.title }}">{{ item.title }}</a>
-				  {% endfor %}
-				  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-gray w3-right w3-hide-large w3-hide-medium" onclick="openMenu()"><i class="fas fa-bars"></i></a>
-			</div>
-			
-			<div id="mobileMenu" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
-				{% capture pagePath %}Home{% endcapture %}
-				<a class="w3-bar-item w3-button {% if page.title == pagePath %}w3-gray{% else %}w3-hover-gray{% endif %}" href="/">Home</a></li>
-				{% for item in doclist %}
-					{% capture pagePath %}/{{ "music/" | append: item.title | downcase }}/{% endcapture %}
-					<!-- <li class="w3-hide-small"><a class="{% if page.url == pagePath %}w3-gray{% else %}w3-hover-gray{% endif %}"  href="{{ pagePath | downcase }}" alt="{{ item.title }}">{{ item.title }}</a></li> -->
-					<a class="w3-bar-item w3-button {% if page.url == pagePath %}w3-gray{% else %}w3-hover-gray{% endif %}" href="{{ pagePath | downcase }}">{{ item.title }}</a></li>
-				{% endfor %}
-			</div>
-		</nav>
-		<script>
-			function openMenu(){
-				$('#mobileMenu').toggleClass("w3-show");
-			}
-		</script>
+<!-- | sort: 'title' -->
+{% assign doclist = site.data.pages | where: 'reviewed', 'true'  %}
+<nav class="w3-sidebar w3-bar-block w3-black w3-left-align w3-collapse w3-top" style="width: 250px;" id="sideBar">
+	<div class="w3-container w3-display-container w3-padding-16 w3-dark-grey">
+		<i onclick="hide_menu()" class="fas fa-times w3-hide-large w3-button w3-display-topright"></i>
+		<h3 class="w3-dark-grey">Menu</h3>
+	</div>
+	<div class="w3-padding-32 w3-large">
+		{% capture pagePath %}Home{% endcapture %}
+		<a href="/" class="w3-bar-item w3-button {% if page.title == pagePath %}w3-gray{% else %}w3-hover-gray{% endif %}"  alt="Home">Home</a>
+		{% for item in doclist %}
+			{% capture pagePath %}/{{ "music/" | append: item.title | downcase }}/{% endcapture %}
+			<a href="{{ pagePath | downcase }}" class="w3-bar-item w3-button {% if page.url == pagePath %}w3-gray{% else %}w3-hover-gray{% endif %}"  alt="{{ item.title }}">{{ item.title }}</a>
+		{% endfor %}
+	</div>
+</nav>
+
+<div style="height: 0px;" class="filler"></div>
+
+<div id="mobileMenu" class="w3-bar-block w3-black w3-hide-large w3-hide w3-animate-top">
+	{% capture pagePath %}Home{% endcapture %}
+	<a class="w3-bar-item w3-button {% if page.title == pagePath %}w3-gray{% else %}w3-hover-gray{% endif %}" href="/">Home</a>
+	{% for item in doclist %}
+		{% capture pagePath %}/{{ "music/" | append: item.title | downcase }}/{% endcapture %}
+		<!-- <li class="w3-hide-small"><a class="{% if page.url == pagePath %}w3-gray{% else %}w3-hover-gray{% endif %}"  href="{{ pagePath | downcase }}" alt="{{ item.title }}">{{ item.title }}</a></li> -->
+		<a class="w3-bar-item w3-button {% if page.url == pagePath %}w3-gray{% else %}w3-hover-gray{% endif %}" href="{{ pagePath | downcase }}">{{ item.title }}</a>
+	{% endfor %}
+</div>
+
+<header class="w3-bar w3-top w3-hide-large w3-black" id="mobileMenuContainer">
+		<div class="w3-bar-item w3-padding-24 w3-wide">Theme Puzzler | {{ page.title }}</div>
+		<a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="toggle_menu()"><i class="fa fa-bars"></i></a>
+</header>
+
+
+
+<script>
+		$(document).ready(function() {
+
+		setHeight($('.filler'), $('#mobileMenuContainer'));
+
+
+		// When the window is resized the height might
+		// change depending on content. So to be safe
+		// we rerun the function
+		$(window).resize(function() {
+			setHeight($('.filler'), $('#mobileMenuContainer'));
+			// setHeight($('.missHeader'), $('#mobileMenuContainer'));        
+		});
+
+	});
+
+	// sets height of element 1 to equal the height of element 2
+	function setHeight(elem1, elem2) {
+		console.log("resize");
+		var height = elem2.height();
+		
+		elem1.css('height', height); 
+	}
+
+	// set the padding of element 1 to equal the height of element 2
+	function setPadding(elem1, elem2) {
+		var height = elem2.height();
+		elem1.css('padding-top', height);
+	}
+</script>
+
+<script>
+	function toggle_menu() {
+		$('#mobileMenu').toggleClass("w3-show");
+	}
+
+	function show_menu() {
+		console.log("Menu open")
+		// $('#sideBar').addClass("w3-show");
+		// $('#myOverlay').addClass("w3-show")
+		$('#mobileMenu').addClass("w3-show");
+	}
+
+	function hide_menu() {
+		// $('#sideBar').removeClass("w3-show");
+		// $('#myOverlay').removeClass("w3-show");
+		$('#mobileMenu').removeClass("w3-show");
+	}
+</script>
+
+
+
+
+
+
+
+
+
+	<!-- sideNav
+	<!-- <img src="/favicon.ico" alt="Logo" style="width:90%; margin: 10px;"/> --
+	{% capture pagePath %}Home{% endcapture %}
+	<a class="w3-padding {% if page.title == pagePath %}w3-gray{% else %}w3-hover-gray{% endif %}" href="/" alt="Home">Home</a>
+	{% for item in doclist %}
+		{% capture pagePath %}/{{ "music/" | append: item.title | downcase }}/{% endcapture %}
+		<a class="w3-padding {% if page.url == pagePath %}w3-gray{% else %}w3-hover-gray{% endif %}" href="{{ pagePath | downcase }}" alt="{{ item.title }}">{{ item.title }}</a>
+	{% endfor %}
+	<!-- <a class="w3-padding w3-hover-black" href="/type-def/">Type-def</a>	 --
+</nav>
+
+ -->

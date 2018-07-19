@@ -31,62 +31,63 @@
 		</script>
     </head>
     <body>
-        <h1>Theme Puzzler | {{ page.title }}</h1>
-		
 		{% include nav.html %}
 
-		<!-- {% for item in page.pieces %} -->
-			<!-- <p>{{ item }}</p> -->
-		<!-- {% endfor %} -->
-		<div class="w3-row-padding">
-			<div class="w3-col l6 s12">
-				To share this version, use this link: <span id="link"></span>
+		<div class="bodyMain">
+			<h1 class="w3-hide-small w3-hide-medium">Theme Puzzler | {{ page.title }}</h1>
+			<!-- {% for item in page.pieces %} -->
+				<!-- <p>{{ item }}</p> -->
+			<!-- {% endfor %} -->
+			<div class="w3-row-padding">
+				<div class="w3-col l6 s12">
+					To share this version, use this link: <span id="link"></span>
+				</div>
+				<div class="w3-col l6 s12">
+					To load a specific verion: 
+					<form>
+						<label>Request Version: 
+						<input type="text" name="id" id="idEntry" onClick="this.setSelectionRange(0, this.value.length)" required></label>
+						<button class="w3-btn w3-black">Load</button>
+					</form>
+				</div>
 			</div>
-			<div class="w3-col l6 s12">
-				To load a specific verion: 
-				<form>
-					<label>Request Version: 
-					<input type="text" name="id" id="idEntry" onClick="this.setSelectionRange(0, this.value.length)" required></label>
-					<button class="w3-btn w3-black">Load</button>
-				</form>
-			</div>
-		</div>
 
-		<div class="w3-padding"></div>
-		
-		<div class="w3-row">
-			<div class="w3-col s12">
-				<a class="w3-btn w3-black" id="allPlayButton" onclick="playAll();">Play All <i id="allPlayButtonIcon" class="fas fa-play"></i></a>
-			</div>			
-		</div>
-
-		<div class="w3-content w3-padding" id="musicRegion">
-
-			<div id="sortable" class="noselect w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border" style="cursor: -webkit-grab;">
-			{% assign entry = 0 %}
+			<div class="w3-padding"></div>
 			
-			{% for item in page.pieces %}
-				<!-- TODO: make font larger on mobile -->
-				<div class="sortRegion">
-					<span  id="row{{entry}}" class="w3-center">
-						<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
-					</span>
-				</div>	
-
-				{% assign entry = entry | plus: 1 %}
-			{% endfor %}
+			<div class="w3-row">
+				<div class="w3-col s12">
+					<a class="w3-btn w3-black" id="allPlayButton" onclick="playAll();">Play All <i id="allPlayButtonIcon" class="fas fa-play"></i></a>
+				</div>			
 			</div>
-		</div>
-		<div class="w3-center w3-container">
-			<button class="w3-btn w3-black" onclick="checkScore();">Check Score</button>
-			<div id="scoreModal" class="w3-modal">
-				<div class="w3-modal-content">
-					<div class="w3-card">
-						<header class="w3-container w3-black">
-								<span onclick="document.getElementById('scoreModal').style.display='none'" class="w3-button w3-right w3-black w3-hover-red">&times;</span>
-						</header>
-						<div id="scoreTable" class="w3-container w3-center">
-								<i class="fas fa-spinner fa-spin"></i>
+
+			<div class="w3-content w3-padding" id="musicRegion">
+
+				<div id="sortable" class="noselect w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border" style="cursor: -webkit-grab;">
+				{% assign entry = 0 %}
+				
+				{% for item in page.pieces %}
+					<!-- TODO: make font larger on mobile -->
+					<div class="sortRegion">
+						<span  id="row{{entry}}" class="w3-center">
+							<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
+						</span>
+					</div>	
+
+					{% assign entry = entry | plus: 1 %}
+				{% endfor %}
+				</div>
+			</div>
+			<div class="w3-center w3-container">
+				<button class="w3-btn w3-black" onclick="checkScore();">Check Score</button>
+				<div id="scoreModal" class="w3-modal">
+					<div class="w3-modal-content">
+						<div class="w3-card">
+							<header class="w3-container w3-blue">
+									<span onclick="document.getElementById('scoreModal').style.display='none'" class="w3-button w3-right w3-blue w3-hover-black">&times;</span>
+							</header>
+							<div id="scoreTable" class="w3-container w3-center">
+									<i class="fas fa-spinner fa-spin"></i>
+							</div>
 						</div>
 					</div>
 				</div>
