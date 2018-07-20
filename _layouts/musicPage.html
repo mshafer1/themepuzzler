@@ -25,7 +25,9 @@
 		<script src="/scripts/scrambler.js"></script>
 		<script>
 			$( function() {
-			  $( "#sortable" ).sortable();
+			  $( "#sortable" ).sortable({
+				start: stopAll,
+			  });
 			  $( "#sortable" ).disableSelection();
 			} );
 		</script>
@@ -68,9 +70,9 @@
 				{% for item in page.pieces %}
 					<!-- TODO: make font larger on mobile -->
 					<div class="sortRegion">
-						<span  id="row{{entry}}" class="w3-center">
+						<div  id="row{{entry}}" class="w3-center">
 							<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
-						</span>
+						</div>
 					</div>	
 
 					{% assign entry = entry | plus: 1 %}
