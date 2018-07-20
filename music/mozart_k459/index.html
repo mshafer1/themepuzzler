@@ -27,7 +27,9 @@
 		<script src="/scripts/scrambler.js"></script>
 		<script>
 			$( function() {
-			  $( "#sortable" ).sortable();
+			  $( "#sortable" ).sortable({
+				start: stopAll,
+			  });
 			  $( "#sortable" ).disableSelection();
 			} );
 		</script>
@@ -277,18 +279,18 @@
 				
 					<!-- TODO: make font larger on mobile -->
 					<div class="sortRegion">
-						<span  id="row0" class="w3-center">
+						<div  id="row0" class="w3-center">
 							<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
-						</span>
+						</div>
 					</div>	
 
 					
 				
 					<!-- TODO: make font larger on mobile -->
 					<div class="sortRegion">
-						<span  id="row1" class="w3-center">
+						<div  id="row1" class="w3-center">
 							<i class="fas fa-spinner fa-spin"></i> <!-- draggable row -->
-						</span>
+						</div>
 					</div>	
 
 					
